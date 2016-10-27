@@ -1,5 +1,5 @@
 # Angular UI Block
-[![npm version](https://img.shields.io/npm/v/angular-ui-block.svg?style=flat-square)](https://www.npmjs.com/package/angular-ui-block) [![npm downloads](https://img.shields.io/npm/dt/angular-ui-block.svg?style=flat-square)](https://www.npmjs.com/package/angular-ui-block) [![Code Climate](https://img.shields.io/codeclimate/github/kabirbaidhya/angular-ui-block.svg?style=flat-square)](https://codeclimate.com/github/kabirbaidhya/angular-ui-block)
+[![npm version](https://img.shields.io/npm/v/angular-ui-block.svg?style=flat-square)](https://www.npmjs.com/package/angular-ui-block) [![npm downloads](https://img.shields.io/npm/dt/angular-ui-block.svg?style=flat-square)](https://www.npmjs.com/package/angular-ui-block)
 
 Angular UI Block Module
 
