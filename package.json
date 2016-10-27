@@ -34,5 +34,10 @@
     "spinner",
     "loading"
   ],
+  "files": [
+    "lib/",
+    "dist/",
+    "index.js"
+  ],
   "license": "MIT"
 }
