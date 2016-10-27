@@ -6,7 +6,14 @@ Angular UI Block Module
 ## Installation
 
 ```bash
+# Using npm
 $ npm install angular-ui-block --save
+
+# Using Yarn
+$ yarn add angular-ui-block
+
+# Using Bower
+$ bower install angular-ui-block --save
 ```
 Include the package using common js `require()` or ES2015 `import`:
 ```javascript
