@@ -12,13 +12,18 @@
     "babel-preset-es2015": "^6.16.0",
     "npm-run-all": "^3.1.1",
     "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.4",
     "webpack": "^1.13.2"
   },
   "scripts": {
+    "build": "run-s clean transpile bundle:* css:*",
+    "clean": "rimraf lib/ dist/",
     "transpile": "babel src -d lib",
-    "bundle": "webpack -d --output-filename angular-ui-block.js && webpack -p --output-filename angular-ui-block.min.js",
-    "build": "npm run transpile && npm run bundle",
-    "prepublish": "npm run build"
+    "bundle:dev": "webpack -d --output-filename angular-ui-block.js",
+    "bundle:prod": "webpack -p --output-filename angular-ui-block.min.js",
+    "css:cp": "cp resources/style/style.css dist/angular-ui-block.css",
+    "css:min": "cssnano resources/style/style.css dist/angular-ui-block.min.css",
+    "prepublish": "run-s build"
   },
   "repository": {
     "type": "git",
