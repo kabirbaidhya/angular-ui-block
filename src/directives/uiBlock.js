@@ -9,9 +9,9 @@ export default function uiBlock($compile) {
         },
         restrict: 'A',
         link(scope, element) {
-            var overlay = getOverlay();
-            var spinner = getSpinner();
-            var wrapper = getWrapper([overlay, spinner]);
+            let overlay = getOverlay();
+            let spinner = getSpinner();
+            let wrapper = getWrapper([overlay, spinner]);
 
             scope.overlayStyle = getOverlayStyle();
             scope.spinnerStyle = getSpinnerStyle();
@@ -26,30 +26,15 @@ export default function uiBlock($compile) {
 }
 
 function getOverlayStyle() {
-    return {
-        'position': 'absolute',
-        'top': '0',
-        'right': '0',
-        'bottom': '0',
-        'left': '0',
-        'z-index': '20',
-        'background': 'rgba(255, 255, 255, 0.5)'
-    };
+    return {};
 }
 
 function getSpinnerStyle() {
-    return {
-        'top': 'calc(50% - 40px)',
-        'left': '0',
-        'right': '0',
-        'z-index': '21',
-        'position': 'absolute',
-        'text-align': 'center'
-    };
+    return {};
 }
 
 function getWrapper(elements) {
-    var wrapper = angular.element('<div/>').attr({
+    let wrapper = angular.element('<div/>').attr({
         'class': 'ui-block-wrapper',
         'ng-show': 'uiBlock'
     });

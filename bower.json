@@ -1,7 +1,10 @@
 {
   "name": "angular-ui-block",
   "description": "Angular UI Block Module",
-  "main": "dist/angular-ui-block.js",
+  "main": [
+    "dist/angular-ui-block.css",
+    "dist/angular-ui-block.js"
+  ],
   "authors": [
     "Kabir Baidhya <kabirbaidhya@gmail.com>"
   ],
