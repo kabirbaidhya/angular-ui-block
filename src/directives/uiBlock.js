@@ -13,6 +13,8 @@ export default function uiBlock($compile) {
             let spinner = getSpinner();
             let wrapper = getWrapper([overlay, spinner]);
 
+            const UI_BLOCKING_CLASS = 'ui-blocking';
+
             scope.overlayStyle = getOverlayStyle();
             scope.spinnerStyle = getSpinnerStyle();
 
@@ -21,6 +23,14 @@ export default function uiBlock($compile) {
             if (element.find('.ui-block-wrapper').length === 0) {
                 element.append($compile(wrapper)(scope));
             }
+
+            scope.$watch('uiBlock', function() {
+                if (scope.uiBlock) {
+                    element.addClass(UI_BLOCKING_CLASS);
+                } else {
+                    element.removeClass(UI_BLOCKING_CLASS);
+                }
+            });
         }
     };
 }

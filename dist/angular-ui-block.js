@@ -125,6 +125,8 @@
 	            var spinner = getSpinner();
 	            var wrapper = getWrapper([overlay, spinner]);
 	
+	            var UI_BLOCKING_CLASS = 'ui-blocking';
+	
 	            scope.overlayStyle = getOverlayStyle();
 	            scope.spinnerStyle = getSpinnerStyle();
 	
@@ -133,6 +135,14 @@
 	            if (element.find('.ui-block-wrapper').length === 0) {
 	                element.append($compile(wrapper)(scope));
 	            }
+	
+	            scope.$watch('uiBlock', function () {
+	                if (scope.uiBlock) {
+	                    element.addClass(UI_BLOCKING_CLASS);
+	                } else {
+	                    element.removeClass(UI_BLOCKING_CLASS);
+	                }
+	            });
 	        }
 	    };
 	}
