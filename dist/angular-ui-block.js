@@ -138,6 +138,7 @@
 	
 	            scope.$watch('uiBlock', function () {
 	                if (scope.uiBlock) {
+	                    element.scrollTop(0); // Scroll to top while blocking the UI
 	                    element.addClass(UI_BLOCKING_CLASS);
 	                } else {
 	                    element.removeClass(UI_BLOCKING_CLASS);

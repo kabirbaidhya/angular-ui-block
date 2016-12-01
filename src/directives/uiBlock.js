@@ -5,7 +5,7 @@ uiBlock.$inject = ['$compile'];
 export default function uiBlock($compile) {
     return {
         scope: {
-            uiBlock: '=',
+            uiBlock: '='
         },
         restrict: 'A',
         link(scope, element) {
@@ -24,8 +24,9 @@ export default function uiBlock($compile) {
                 element.append($compile(wrapper)(scope));
             }
 
-            scope.$watch('uiBlock', function() {
+            scope.$watch('uiBlock', function () {
                 if (scope.uiBlock) {
+                    element.scrollTop(0); // Scroll to top while blocking the UI
                     element.addClass(UI_BLOCKING_CLASS);
                 } else {
                     element.removeClass(UI_BLOCKING_CLASS);
