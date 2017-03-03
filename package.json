@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-block",
-  "version": "0.0.5-0",
+  "version": "0.0.6-0",
   "description": "Angular UI Block Module",
   "main": "index.js",
   "dependencies": {
