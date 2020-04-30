@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "angular": "^1.*",
-    "jquery": "3.4.0"
+    "jquery": "3.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
